@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="400.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainFormController">
+   <children>
+      <Label layoutX="91.0" layoutY="20.0" prefHeight="27.0" prefWidth="307.0" text="Student Form" textFill="#192a56">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="36.0" layoutY="55.0" prefHeight="6.0" prefWidth="614.0" />
+      <JFXTextField fx:id="txtId" layoutX="35.0" layoutY="73.0" promptText="ID" />
+      <JFXTextField fx:id="txtAddress" layoutX="363.0" layoutY="74.0" promptText="Address" />
+      <JFXTextField fx:id="txtName" layoutX="195.0" layoutY="74.0" promptText="Name" />
+      <JFXButton layoutX="511.0" layoutY="74.0" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: #40739e;" text="Save Student" textFill="#f5f0f0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblStudent" layoutX="34.0" layoutY="133.0" prefHeight="239.0" prefWidth="623.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="166.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="137.0" text="Address" />
+            <TableColumn fx:id="colUpdate" prefWidth="130.0" text="Update" />
+            <TableColumn fx:id="colDelete" prefWidth="114.0" text="Delete" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
